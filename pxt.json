@@ -6,12 +6,17 @@
         "radio": "*",
         "microphone": "*",
         "power": "github:microbit-foundation/pxt-microbit-v2-power#v0.2.3",
-        "datalogger": "*"
+        "datalogger": "*",
+        "linebeacon": "github:pizayanz/pxt-linebeacon#v0.0.14",
+        "pxt-kitronik-viewtext32": "github:kitronikltd/pxt-kitronik-viewtext32#v1.2.2",
+        "MakerBit": "github:1010technologies/pxt-makerbit#v2.2.0",
+        "koi": "github:kittenbot/pxt-koi#v0.6.8"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"

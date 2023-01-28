@@ -90,7 +90,8 @@ let ghost: game.LedSprite = null
 let Food: game.LedSprite = null
 let Hero: game.LedSprite = null
 let Is_Playing_Game = 0
-koi.koi_speechcmd_addmodel("Hey Boxer")
+let TimeUsed = datalogger.createCV("TimesUsed", 6)
+datalogger.log(datalogger.createCV("TimesUsed", TimeUsed + 1))
 Is_Playing_Game = 0
 basic.showLeds(`
     . . . . .
@@ -102,9 +103,6 @@ basic.showLeds(`
 music.playSoundEffect(music.createSoundEffect(WaveShape.Sawtooth, 1, 5000, 255, 255, 5092, SoundExpressionEffect.Vibrato, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
 music.playSoundEffect(music.builtinSoundEffect(soundExpression.yawn), SoundExpressionPlayMode.UntilDone)
 Kitronik_VIEWTEXT32.showString("Boxing 32")
-if (makerbit.isLcdConnected()) {
-    makerbit.showStringOnLcd1602("Boxing 32", makerbit.position1602(LcdPosition1602.Pos1), 16)
-}
 basic.showLeds(`
     . . . . .
     . . # . .
@@ -128,9 +126,6 @@ basic.showLeds(`
     # # . # #
     # # . # #
     `)
-koi.koi_cloud_tts("hello")
-koi.koi_cloud_tts("My Name is Boxing 32")
-koi.koi_cloud_tts("but you may call me boxer")
 loops.everyInterval(10000, function () {
     if (Is_Playing_Game == 1) {
     	
